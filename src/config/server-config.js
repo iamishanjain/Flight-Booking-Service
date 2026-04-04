@@ -1,7 +1,8 @@
-const dotenv = require('dotenv');
+process.loadEnvFile();
 
-dotenv.config();
+const ServerConfig = {
+  PORT: process.env.PORT,
+  FLIGHT_SERVICE: process.env.FLIGHT_SERVICE,
+};
 
-module.exports = {
-    PORT: process.env.PORT
-}
+module.exports = ServerConfig;
